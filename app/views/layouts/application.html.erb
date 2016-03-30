@@ -8,6 +8,21 @@
 </head>
 <body>
 
+<header>
+<div class="wraper_wide">
+					<%= link_to "Planher", root_path, id: "logo" %>
+					<nav>
+						<ul>
+							<li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
+							<li><%= link_to "Gestión de Flotas", gestion_de_flotas_path %></li>
+							<li><%= link_to "Taller de Diesel", taller_de_diesel_path %></li>
+							<li><%= link_to "Portal de Clientes", portal_clientes_path %></li>
+							<li><%= link_to "Contacto", contacto_path %></li>
+						</ul>
+					</nav>
+				</div>
+</header>
+
 <%= yield %>
 
 </body>
