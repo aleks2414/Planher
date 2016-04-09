@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/gestion_de_flotas' => 'pages#gestion_de_flotas'
   get '/taller_de_diesel' => 'pages#taller_de_diesel'
   get '/portal_clientes' => 'pages#portal_clientes'
-  get '/contacto' => 'pages#contacto'
+
+  resources :contacts, only: [:new, :create]
 
   root 'welcome#index'
 
