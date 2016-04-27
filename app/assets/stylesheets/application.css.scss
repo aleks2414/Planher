@@ -296,7 +296,7 @@ textarea {
 
 
 #form {
-	padding: 0 0 5rem 0;
+	padding: 7rem 0 5rem 0;
 }
 
 .button {
@@ -344,3 +344,14 @@ textarea {
 
 
 @import 'normalize';
+
+
+
+
+
+@media (max-width: 600px)
+{
+	body {
+		background-color: blue;
+	}
+}
