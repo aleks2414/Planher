@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Planher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,11 +12,11 @@
 <header>
 <div class="wraper_wide">
 					<%= link_to "Planher", root_path, id: "logo" %>
-					<nav>
+					<nav class="nav">
 						<ul>
-							<li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
 							<li><%= link_to "Gestión de Flotas", gestion_de_flotas_path %></li>
 							<li><%= link_to "Taller de Diesel", taller_de_diesel_path %></li>
+							<li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
 							<li><%= link_to "Portal de Clientes", portal_clientes_path %></li>
 							<li><%= link_to "Contacto", new_contact_path %></li>
 						</ul>
@@ -25,5 +26,7 @@
 
 <%= yield %>
 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
