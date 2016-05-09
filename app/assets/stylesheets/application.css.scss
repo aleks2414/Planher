@@ -12,7 +12,7 @@ $white: #FFFFFF;
 $highlight: #c03a11;
 $dark: #333333;
 $grey: #565656;
-$red: #20ACA0;
+$red: #173967;
 $light: #ececec;
 
 .wraper_super_wide {
@@ -207,6 +207,7 @@ header {
 
 #nume {
 	padding-top: 12rem;
+	margin: 8rem 0;
 	ul {
 		list-style: none;
 		padding-left: 0;
@@ -453,6 +454,15 @@ body {
 	.servicio {
 		width: 100%;
 		margin: 2rem 0;
+		span {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 5rem;
+		}
+		p {
+			font-size: 3rem;
+		}
 	}
 }
 
@@ -460,9 +470,73 @@ body {
 	.servicio2 {
 		width: 100%;
 		margin: 2rem 0;
+		height: 250px;
+		span {
+			font-size: 8rem;
+		}
+		p {
+			font-size: 4rem;
+		}
+	}
+}
+}
+
+.tit {
+	font-size: 3rem;
+}
+
+@media (max-width: 1000px) {
+#tres {
+	ul {
+		li {
+			h3 {
+				font-size: 12rem;
+				bottom: 8rem;
+			}
+			a {
+				font-size: 5rem;
+			}
+		}
 	}
 }
 
+#texto {
+	p {
+		font-size: 5rem;
+	}
+}
+
+.just {
+	font-size: 5rem;
+}
+
+.tit {
+	font-size: 7rem;
+	margin: 12rem 0 0 0;
+}
+
+#nume {
+	margin-bottom: 4rem;
+	ul {
+		li {
+			width: 100%;
+			h5 {
+				font-size: 4rem;
+			}
+			h6 {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+footer {
+		margin-top: 54rem;
+}
+
+#form {
+	margin-bottom: 26rem;
+}
 
 }
 
