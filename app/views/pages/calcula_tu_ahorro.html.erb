@@ -1,6 +1,6 @@
 <div id="banner" class="cover_ahorro">
 	<h1>Cálcula tu Ahorro </h1>
-	<h3>Ahorra. Diseña. Aprende</h3>
+	<h3>LO QUE NO SE MIDE, NO SE CONTROLA. LO QUE NO SE CONTROLA, NO SE MEJORA</h3>
 </div>
 
 <div class="container">
@@ -11,10 +11,74 @@
 </div>
 </div>
 
+
+<!-- cotizador  -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3" id="cotiza">
+<div class="titulos">
+	<h1><strong>Calcula tu ahorro</strong></h1>
+</div>
+			<form>
+				<label>¿Sabes cuál es el gasto de gasolina en tu flotilla?</label> <br>
+				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
+				<label>¿Sabes cuál es el gasto de mantenimiento correctivo?</label> <br>
+				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
+				<div class="button button_red button_block bloque" id="15">Quiero calcular mi ahorro</div>
+
+				<span id="14"></span>
+
+			</form>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 <div class="col-md-6 caja">
 	<%= image_tag src="gear.jpg", :class =>"fot" %>
 </div>
+
+<script>
+	console.log("Hola");
+
+var porc= .05;
+
+$('#15').click(function() {
+	console.log("hola2");
+
+$( ".dos" ).remove();
+$( ".tres" ).remove();
+
+var litros = document.getElementById("gas").value;
+litros= litros*1;
+console.log(litros);
+var mant= document.getElementById("man").value;
+mant=mant*1;
+console.log(mant);
+
+var resultado= (litros+mant);
+console.log(resultado);
+
+casa= resultado*porc;
+console.log(casa);
+
+
+
+$( "#14" ).append( "<h1 class='dos'>Tu ahorro anual con nosotros es de <br> $ "+ casa +"</div><br>" );
+$( "#14" ).append( "<h1 class='tres'>Tu ahorro al final del uso de la metodología es de <br> $ "+ casa*3 +"</div><br>");
+});
+
+
+$("#gas").keypress (function(){
+$( ".dos" ).remove();
+$( ".tres" ).remove();
+});
+
+$("#man").keypress (function(){
+$( ".dos" ).remove();
+$( ".tres" ).remove();
+});
+</script>
 
 	<div class="col-md-6">
 	<h3 class="tit"><strong>TE LO DEMOSTRAMOS</strong></h3>

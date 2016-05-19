@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planher</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
@@ -11,44 +12,59 @@
 <body>
 
 <header>
-<div class="wraper_wide">
-					<%= image_tag src="logo.png", id: "logo2" %>
-					<%= link_to "Planher", root_path, id: "logo" %>
-					<nav class="nav">
-						<ul>
-							<li><%= link_to "Gestión de Flotas", gestion_de_flotas_path %></li>
-							<li><%= link_to "Taller de Diesel", taller_de_diesel_path %></li>
-							<li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
-							<li><%= link_to "Portal de Clientes", portal_clientes_path %></li>
-							<li><%= link_to "Contacto", new_contact_path %></li>
-						</ul>
-					</nav>
-				</div>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <%= link_to(image_tag("logo.png"), root_path, class: "navbar-brand logo2") %>
+      
+      <%= link_to "Planher", root_path, id: "logo", class: "navbar-brand logo" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+              <li><%= link_to "Gestión de Flotas", gestion_de_flotas_path %></li>
+              <li><%= link_to "Taller de Diesel", taller_de_diesel_path %></li>
+              <li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
+              <li><%= link_to "Portal de Clientes", portal_clientes_path %></li>
+              <li><%= link_to "Contacto", new_contact_path %></li>
+          </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 </header>
 
 <%= yield %>
 
-<footer>
-	<div class="row container">
-	<div class="iconos col-md-3 col-md-offset-2">
-		
-		<a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+    <footer class="footer-basic-centered">
 
-		<a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+      <p class="footer-company-motto">Planher</p>
 
-		<a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+      <p class="footer-links">
+        <a href="#"><span class="fa fa-building-o" aria-hiden="true"></span>Oficina: 6608-8219</a>
+        ·
+        <a href="#"><span class="fa fa-mobile" aria-hiden="true"></span>Celular: 55 5331-0394</a>
+        ·
+        <a href="#"><span class="fa fa-whatsapp" aria-hiden="true"></span>Whatsapp: 55 5331-0394</a>
+        ·
+        <a href="#"><span class="fa fa-envelope-o" aria-hiden="true"></span>contacto@planher.mx</a>
+        
+      </p>
 
-		<a href="#"><span class="fa fa-youtube" aria-hidden="true"></span></a>
+      <p class="footer-company-name">Planher &copy; 2016</p>
 
-	</div>
+    </footer>
 
-	<div class="copy col-md-3 col-md-offset-2">
-		<h2>© 2016 PLANHER <br>
-All Rights Reserved</h2>
-	</div>
-	</div>
-</footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </body>
 </html>

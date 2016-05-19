@@ -12,9 +12,8 @@
 </div>
 
 
-<div id="form">
-<div class="col-sm-6 col-sm-offset-3">
-
+	<div class="container">
+	<div class="col-md-6 col-md-offset-3" id="form">
 	<%= form_for @contact do |f| %>
 		<%= f.label :name %><br>
 		<%= f.text_field :name, required: true %>
@@ -38,37 +37,5 @@
 <br>
 		<%= f.submit 'Enviar mensaje', class: "button button_red button_block" %>
 	<% end %>
-	
-</div>
-</div>
-
-
-
-
-
-<div class="wraper_super_skiny">
-<div id="nume">
-
-<ul>
-	<li>
-		<h5>31</h5>
-		<hr>
-		<h6>kms recorridos</h6>
-	</li>
-
-		<li>
-		<h5>150</h5>
-		<hr>
-		<h6>litros ahorrados</h6>
-	</li>
-
-		<li>
-		<h5>$200,000</h5>
-		<hr>
-		<h6>pesos ahorrados</h6>
-	</li>
-
-</ul>
-
-</div>
-</div>
+	</div>
+	</div>
