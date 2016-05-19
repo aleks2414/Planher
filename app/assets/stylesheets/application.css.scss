@@ -89,6 +89,8 @@ $light: #ececec;
 	margin-bottom: 1rem;
 	background-attachment: fixed;
 	height: 90vh;
+	background-blend-mode: multiply;
+  background-color: grey;
 
 	h1 {
 		text-transform: uppercase;
@@ -487,7 +489,7 @@ body {
 	.servicio {
 		width: 100%;
 		margin: 2rem 0;
-		height: 300px;
+		height: 400px;
 		span {
 			font-size: 3rem;
 		}
@@ -504,7 +506,7 @@ body {
 	.servicio2 {
 		width: 100%;
 		margin: 2rem 0;
-		height: 300px;
+		height: 400px;
 		span {
 			font-size: 8rem;
 		}
