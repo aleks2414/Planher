@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <%= link_to(image_tag("logo.png"), root_path, class: "navbar-brand logo2") %>
+      <%= link_to(image_tag("logo.png"), root_path, class: "navbar-brand logo2" %>
       
       <%= link_to "Planher", root_path, id: "logo", class: "navbar-brand logo" %>
     </div>
@@ -31,11 +31,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-              <li><%= link_to "Gestión de Flotas", gestion_de_flotas_path %></li>
-              <li><%= link_to "Taller de Diesel", taller_de_diesel_path %></li>
-              <li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path %></li>
-              <li><%= link_to "Portal de Clientes", portal_clientes_path %></li>
-              <li><%= link_to "Contacto", new_contact_path %></li>
+              <li><%= link_to "Gestión de Flotas", gestion_de_flotas_path, class: "ojo" %></li>
+              <li><%= link_to "Taller de Diesel", taller_de_diesel_path, class: "ojo" %></li>
+              <li><%= link_to "Calcula tu ahorro", calcula_tu_ahorro_path, class: "ojo" %></li>
+              <li><%= link_to "Portal de Clientes", portal_clientes_path, class: "ojo" %></li>
+              <li><%= link_to "Contacto", new_contact_path, class: "ojo" %></li>
           </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -46,7 +46,7 @@
 
     <footer class="footer-basic-centered">
 
-      <p class="footer-company-motto">Planher</p>
+      <p class="footer-company-motto">Planher: Optimizando operaciones</p>
 
       <p class="footer-links">
         <a href="#"><span class="fa fa-building-o" aria-hiden="true"></span>Oficina: 6608-8219</a>
