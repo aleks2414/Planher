@@ -315,7 +315,7 @@ $light: #ececec;
 		box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
 
 		span {
-			font-size: 2.7rem;
+			font-size: 3.5 rem;
 			color: $grey;
 		}
 
@@ -485,6 +485,10 @@ body {
 	}	
 }
 
+#ojo {
+	color: white;
+}
+
 #servicios {
 	.servicio {
 		width: 100%;
@@ -494,16 +498,14 @@ body {
 			font-size: 3rem;
 		}
 		h3 {
-			font-size: 5rem;
+			font-size: 4rem;
 		}
 		p {
 			font-size: 3rem;
 		}
 	}
 
-	.ojo {
-		color: white;
-	}
+
 }
 
 #servicios2 {
