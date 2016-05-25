@@ -20,9 +20,9 @@
 	<h1><strong>Calcula tu ahorro</strong></h1>
 </div>
 			<form>
-				<label>¿Sabes cuál es el gasto mensual? (MXN)</label> <br>
+				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
 				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
-				<label>¿Sabes cuál es el gasto correctivo mensual? (MXN) </label> <br>
+				<label>¿Sabes cuál es el gasto de mantenimiento correctivo mensual? (MXN) </label> <br>
 				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
 				<div class="button button_red button_block bloque" id="15">Quiero calcular mi ahorro</div>
 
@@ -64,8 +64,8 @@ console.log(casa);
 
 
 
-$( "#14" ).append( "<h1 class='dos'>Tu ahorro anual con nosotros es de <br> $ "+ casa +"</div><br>" );
-$( "#14" ).append( "<h1 class='tres'>Tu ahorro al final del uso de la metodología es de <br> $ "+ casa*3 +"</div><br>");
+$( "#14" ).append( "<h1 class='dos'>Tu ahorro anual con nosotros es de <br> $ "+ casa*3 +"</div><br>" );
+$( "#14" ).append( "<h1 class='tres'>Tu ahorro al final del uso de la metodología es de <br> $ "+ casa*36 +"</div><br>");
 });
 
 

@@ -673,7 +673,7 @@ input {
 /* In our demo, the footers are fixed to the bottom of the page */
 
 footer{
-	position: fixed;
+	/*position: fixed;*/
 	bottom: 0;
 
 	span {
@@ -682,5 +682,8 @@ footer{
 	}
 }
 
+@media (max-height:800px){
+	footer { position: static; }
+}
 
 
