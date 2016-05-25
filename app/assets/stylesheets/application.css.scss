@@ -493,7 +493,7 @@ body {
 	.servicio {
 		width: 100%;
 		margin: 2rem 0;
-		height: 400px;
+		height: 500px;
 		span {
 			font-size: 3rem;
 		}
@@ -504,15 +504,17 @@ body {
 			font-size: 3rem;
 		}
 	}
+}
 
-
+#banner {
+background-attachment: unset;
 }
 
 #servicios2 {
 	.servicio2 {
 		width: 100%;
 		margin: 2rem 0;
-		height: 400px;
+		height: 500px;
 		span {
 			font-size: 8rem;
 		}
@@ -575,9 +577,6 @@ body {
 	}
 }
 
-#banner {
-	width: 100%;
-}
 
 
 #form {
