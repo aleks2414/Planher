@@ -9,25 +9,28 @@
 <div class="wraper_wide">
 <div id="tres">
 	<ul>
+		<%= link_to gestion_de_flotas_path do %>
 		<li>
 			<%= image_tag src="gestion2.jpg" %>
 			<h3>Gestión de Flotas</h3>
-			<p><%= link_to "Conoce más >", gestion_de_flotas_path %></p>			
 		</li>
+		<% end %>
 <!--  -->
+		<%= link_to taller_de_diesel_path do %>
 		<li>
 			<%= image_tag src="taller2.jpg" %>
-			<h3>Taller de Diesel</h3>
-			<p><%= link_to "Conoce más >", taller_de_diesel_path %></p>			
+			<h3>Taller de Diesel</h3>	
 		</li>
+		<% end %>
 <!--  -->
 
 	<!--  -->
+		<%= link_to calcula_tu_ahorro_path do %>
 		<li>
 			<%= image_tag src="ahorro2.jpg" %>	
-			<h3>Calcula tu ahorro</h3>
-			<p><%= link_to "Conoce más >", calcula_tu_ahorro_path %></p>			
+			<h3>Calcula tu ahorro</h3>		
 		</li>
+		<% end %>
 <!--  -->
 	</ul>
 </div>
