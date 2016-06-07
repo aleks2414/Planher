@@ -22,45 +22,25 @@
 			<form>
 
 				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
-				<div class="row">
+				<div class="row col-md-offset-2">
 				<div id="33" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div><%= link_to "No", new_contact_path, class:"button button_red button_block nuevo_bloque" %></div>
+				<div id="44" class="button button_red button_block nuevo_bloque col-md-4">No</div>
 				</div>
 
 				<span id="hid">
+				<h4><strong>Ingresa el gasto mensual de diesel<strong></h4>
+				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
 				<label>¿Sabes cuál es el gasto de mantenimiento correctivo mensual? (MXN) </label> <br>
-				<div class="row">
+				<div class="row col-md-offset-2">
 				<div id="55" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div><%= link_to "No", new_contact_path, class:"button button_red button_block nuevo_bloque" %></div>
+				<div id="66" class="button button_red button_block nuevo_bloque col-md-4">No</div>
 				</div>
 				</span>
 				
-				<span id="14"></span>
-
-			</form>
-		</div>
-	</div>
-</div>
-
-
-<!-- Contac forma -->
-<div class="container" id="hil">
-<div class="col-md-6 col-md-offset-3">
-<div id="form">
-<div class="row">
-
-	<%= form_for @contact do |f| %>
-
-		<%= f.label :gasto %><br>
-		<%= f.number_field :gas, required: true %>
-
-		<br>
-
-		<%= f.label :mantenimiento %><br>
-		<%= f.number_field :mant, required: true %>
-
-		<br>
-
+				<span id="hip">
+				<h4><strong>Ingresa el gasto mensual mantenimiento correctivo</strong></h4>
+				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
+					<%= form_for @contact do |f| %>
 		<%= f.label :nombre %><br>
 		<%= f.text_field :name, required: true %>
 
@@ -78,13 +58,19 @@
 
 <br>
 <br>
-		<%= f.submit 'Quiero saber mi ahorro', class: "button button_red button_block" %>
+		<%= f.submit 'Enviar mensaje', class: "button button_red button_block", id: "15" %>
 	<% end %>
 
-</div>	
+				</span>
+				<span id="14"></span>
+
+			</form>
+		</div>
+	</div>
 </div>
-</div>
-</div>
+
+
+
 
 
 
@@ -107,11 +93,17 @@ $( "#33" ).click(function() {
   $( "#hid" ).show();
 });
 
-
-$( "#55" ).click(function() {
+$( "#44" ).click(function() {
   $( "#hil" ).show();
 });
 
+$( "#55" ).click(function() {
+  $( "#hip" ).show();
+});
+
+$( "#66" ).click(function() {
+  $( "#hil" ).show();
+});
 
 
 var porc= .05;
@@ -155,8 +147,6 @@ $( ".dos" ).remove();
 $( ".tres" ).remove();
 });
 </script>
-
-
 
 	<div class="col-md-6">
 	<h3 class="tit"><strong>TE LO DEMOSTRAMOS</strong></h3>
