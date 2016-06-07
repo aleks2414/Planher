@@ -51,6 +51,9 @@
 
 		<br>
 
+		<%= f.label :mensaje %><br>
+		<%= f.text_area :message, as: :text, class:"contacto_area" %>
+
 		<div class="hidden">
 			<%= f.label :nickname %><br>
 			<%= f.text_field :nickname, hint: 'Esto se queda en blanco' %>
