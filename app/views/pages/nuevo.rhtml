@@ -20,7 +20,7 @@
 	<h1><strong>Calcula tu ahorro</strong></h1>
 </div>
 			<form>
-				<%= form_for @contact do |f| %>
+
 				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
 				<div class="row col-md-offset-2">
 				<div id="33" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
@@ -40,7 +40,7 @@
 				<span id="hip">
 				<h4><strong>Ingresa el gasto mensual mantenimiento correctivo</strong></h4>
 				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
-
+					<%= form_for @contact do |f| %>
 		<%= f.label :nombre %><br>
 		<%= f.text_field :name, required: true %>
 

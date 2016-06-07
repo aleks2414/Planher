@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def calcula_tu_ahorro
+    @contact = Contact.new
   end
 
   def gestion_de_flotas
