@@ -20,26 +20,46 @@
 	<h1><strong>Calcula tu ahorro</strong></h1>
 </div>
 			<form>
-				<%= form_for @contact do |f| %>
+
 				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
-				<div class="row col-md-offset-2">
+				<div class="row">
 				<div id="33" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div id="44" class="button button_red button_block nuevo_bloque col-md-4">No</div>
+				<div><%= link_to "No", new_contact_path, class:"button button_red button_block nuevo_bloque" %></div>
 				</div>
 
 				<span id="hid">
-				<h4><strong>Ingresa el gasto mensual de diesel<strong></h4>
-				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
 				<label>¿Sabes cuál es el gasto de mantenimiento correctivo mensual? (MXN) </label> <br>
-				<div class="row col-md-offset-2">
+				<div class="row">
 				<div id="55" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div id="66" class="button button_red button_block nuevo_bloque col-md-4">No</div>
+				<div><%= link_to "No", new_contact_path, class:"button button_red button_block nuevo_bloque" %></div>
 				</div>
 				</span>
 				
-				<span id="hip">
-				<h4><strong>Ingresa el gasto mensual mantenimiento correctivo</strong></h4>
-				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
+				<span id="14"></span>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- Contac forma -->
+<div class="container" id="hil">
+<div class="col-md-6 col-md-offset-3">
+<div id="form">
+<div class="row">
+
+	<%= form_for @contact do |f| %>
+
+		<%= f.label :gasto %><br>
+		<%= f.number_field :gas, required: true %>
+
+		<br>
+
+		<%= f.label :mantenimiento %><br>
+		<%= f.number_field :mant, required: true %>
+
+		<br>
 
 		<%= f.label :nombre %><br>
 		<%= f.text_field :name, required: true %>
@@ -51,9 +71,6 @@
 
 		<br>
 
-		<%= f.label :mensaje %><br>
-		<%= f.text_area :message, as: :text, class:"contacto_area" %>
-
 		<div class="hidden">
 			<%= f.label :nickname %><br>
 			<%= f.text_field :nickname, hint: 'Esto se queda en blanco' %>
@@ -61,19 +78,13 @@
 
 <br>
 <br>
-		<%= f.submit 'Enviar mensaje', class: "button button_red button_block", id: "15" %>
+		<%= f.submit 'Quiero saber mi ahorro', class: "button button_red button_block" %>
 	<% end %>
 
-				</span>
-				<span id="14"></span>
-
-			</form>
-		</div>
-	</div>
+</div>	
 </div>
-
-
-
+</div>
+</div>
 
 
 
@@ -96,17 +107,11 @@ $( "#33" ).click(function() {
   $( "#hid" ).show();
 });
 
-$( "#44" ).click(function() {
-  $( "#hil" ).show();
-});
 
 $( "#55" ).click(function() {
-  $( "#hip" ).show();
-});
-
-$( "#66" ).click(function() {
   $( "#hil" ).show();
 });
+
 
 
 var porc= .05;
