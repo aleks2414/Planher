@@ -20,48 +20,12 @@
 	<h1><strong>Calcula tu ahorro</strong></h1>
 </div>
 			<form>
-
 				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
-				<div class="row col-md-offset-2">
-				<div id="33" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div id="44" class="button button_red button_block nuevo_bloque col-md-4">No</div>
-				</div>
-
-				<span id="hid">
-				<h4><strong>Ingresa el gasto mensual de diesel<strong></h4>
 				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
 				<label>¿Sabes cuál es el gasto de mantenimiento correctivo mensual? (MXN) </label> <br>
-				<div class="row col-md-offset-2">
-				<div id="55" class="button button_red button_block nuevo_bloque col-md-4">Sí</div>
-				<div id="66" class="button button_red button_block nuevo_bloque col-md-4">No</div>
-				</div>
-				</span>
-				
-				<span id="hip">
-				<h4><strong>Ingresa el gasto mensual mantenimiento correctivo</strong></h4>
 				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
-					<%= form_for @contact do |f| %>
-		<%= f.label :nombre %><br>
-		<%= f.text_field :name, required: true %>
+				<div class="button button_red button_block bloque" id="15">Quiero calcular mi ahorro</div>
 
-		<br>
-
-		<%= f.label :email %><br>
-		<%= f.email_field :email, required: true %>
-
-		<br>
-
-		<div class="hidden">
-			<%= f.label :nickname %><br>
-			<%= f.text_field :nickname, hint: 'Esto se queda en blanco' %>
-		</div>
-
-<br>
-<br>
-		<%= f.submit 'Enviar mensaje', class: "button button_red button_block", id: "15" %>
-	<% end %>
-
-				</span>
 				<span id="14"></span>
 
 			</form>
@@ -69,42 +33,13 @@
 	</div>
 </div>
 
-
-
-
-
-
-<!-- Fin de forma -->
-
 <div class="container">
 <div class="col-md-6 caja">
 	<%= image_tag src="gear.jpg", :class =>"fot" %>
 </div>
 
 <script>
-
-$( "#hid" ).hide();
-$( "#hip" ).hide();
-$( "#hil" ).hide();
-
 	console.log("Hola");
-
-$( "#33" ).click(function() {
-  $( "#hid" ).show();
-});
-
-$( "#44" ).click(function() {
-  $( "#hil" ).show();
-});
-
-$( "#55" ).click(function() {
-  $( "#hip" ).show();
-});
-
-$( "#66" ).click(function() {
-  $( "#hil" ).show();
-});
-
 
 var porc= .05;
 
@@ -126,9 +61,6 @@ console.log(resultado);
 
 casa= resultado*porc;
 console.log(casa);
-
-$( "#hil" ).show();
-
 
 
 
