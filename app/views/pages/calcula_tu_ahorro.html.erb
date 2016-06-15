@@ -21,16 +21,45 @@
 </div>
 			<form>
 				<label>¿Sabes cuál es el gasto mensual en Diesel? (MXN)</label> <br>
-				<input type="number" id="gas" name="quantity" min="1" max="50000"> <br>
+				<input type="number" id="gas" name="quantity"> <br>
 				<label>¿Sabes cuál es el gasto de mantenimiento correctivo mensual? (MXN) </label> <br>
-				<input type="number" id="man" name="quantity2" min="1" max="50000"> <br>
-				<div class="button button_red button_block bloque" id="15">Quiero calcular mi ahorro</div>
-
-				<span id="14"></span>
+				<input type="number" id="man" name="quantity2"> <br><br><br>
+				<button class="button button_red button_block" id="15">Quiero calcular mi ahorro</button>
 
 			</form>
 		</div>
 	</div>
+</div>
+
+
+<div class="container"><div class="contar">
+	<h1> Tu ahorro con nosotros es de <strong>
+	 <%=
+	 	x = (@q.to_f + @r.to_f)*12 
+
+	 	x = x* 0.05
+
+	 	x.round
+
+	 	
+	 	
+	 %> </strong> anual </h1>
+</div>
+</div>
+
+<div class="container"><div class="contar">
+	<h1> Tu ahorro con nosotros es de <strong>
+	 <%=
+	 	x = (@q.to_f + @r.to_f)*36 
+
+	 	x = x* 0.05
+
+	 	x.round
+
+	 	
+	 	
+	 %></strong>  al finalizar la metodología </h1>
+</div>
 </div>
 
 <div class="container">
@@ -38,47 +67,7 @@
 	<%= image_tag src="gear.jpg", :class =>"fot" %>
 </div>
 
-<script>
-	console.log("Hola");
 
-var porc= .05;
-
-$('#15').click(function() {
-	console.log("hola2");
-
-$( ".dos" ).remove();
-$( ".tres" ).remove();
-
-var litros = document.getElementById("gas").value;
-litros= litros*1;
-console.log(litros);
-var mant= document.getElementById("man").value;
-mant=mant*1;
-console.log(mant);
-
-var resultado= (litros+mant);
-console.log(resultado);
-
-casa= resultado*porc;
-console.log(casa);
-
-
-
-$( "#14" ).append( "<h1 class='dos'>Tu ahorro anual con nosotros es de <br> $ "+ casa*12 +"</div><br>" );
-$( "#14" ).append( "<h1 class='tres'>Tu ahorro al final del uso de la metodología es de <br> $ "+ casa*36 +"</div><br>");
-});
-
-
-$("#gas").keypress (function(){
-$( ".dos" ).remove();
-$( ".tres" ).remove();
-});
-
-$("#man").keypress (function(){
-$( ".dos" ).remove();
-$( ".tres" ).remove();
-});
-</script>
 
 	<div class="col-md-6">
 	<h3 class="tit"><strong>TE LO DEMOSTRAMOS</strong></h3>

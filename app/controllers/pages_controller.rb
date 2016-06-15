@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
   def calcula_tu_ahorro
+
+    @q = params[:quantity]
+    @r = params[:quantity2]
+    @p = 0.5
   end
 
   def gestion_de_flotas
